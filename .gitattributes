@@ -1,0 +1,4 @@
+# Ensure binary files are not corrupted by CRLF conversion
+*.db binary
+*.sqlite binary
+*.sqlite3 binary

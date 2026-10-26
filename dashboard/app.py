@@ -67,14 +67,33 @@ st.markdown("""
 
 @st.cache_resource
 def get_db_connection():
-    """Cache connection to local SQLite Data Warehouse, auto-building if running on cloud."""
-    if not DB_PATH.exists():
-        with st.spinner("🚀 First-time Setup: Building Star Schema Data Warehouse on Streamlit Cloud..."):
+    """Cache connection to SQLite Data Warehouse, automatically self-healing if corrupted or missing on Cloud."""
+    def is_database_healthy(path: Path) -> bool:
+        if not path.exists():
+            return False
+        try:
+            test_conn = sqlite3.connect(path)
+            cursor = test_conn.cursor()
+            cursor.execute("SELECT COUNT(*) FROM dim_customers;")
+            count = cursor.fetchone()[0]
+            test_conn.close()
+            return count > 0
+        except Exception:
+            return False
+
+    if not is_database_healthy(DB_PATH):
+        if DB_PATH.exists():
+            try:
+                DB_PATH.unlink()
+            except Exception:
+                pass
+        with st.spinner("🚀 Initializing Star Schema Data Warehouse on Streamlit Cloud (running pipeline)..."):
             import sys
             if str(PROJECT_ROOT) not in sys.path:
                 sys.path.insert(0, str(PROJECT_ROOT))
             from run_pipeline import execute_full_pipeline
             execute_full_pipeline(num_orders=10000)
+
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 conn = get_db_connection()

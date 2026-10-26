@@ -22,9 +22,9 @@ ENV/
 data/raw/*.csv
 data/processed/*.csv
 data/warehouse/powerbi_export/*.csv
+data/warehouse/*.db
 
-# Track database and quality reports for instant cloud deployment
-!data/warehouse/ecommerce_dw.db
+# Track quality reports
 !data/processed/quality_report_before.json
 !data/processed/quality_report_after.json
 
