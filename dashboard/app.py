@@ -67,10 +67,14 @@ st.markdown("""
 
 @st.cache_resource
 def get_db_connection():
-    """Cache connection to local SQLite Data Warehouse."""
+    """Cache connection to local SQLite Data Warehouse, auto-building if running on cloud."""
     if not DB_PATH.exists():
-        st.error(f"Warehouse database not found at {DB_PATH}. Please run `python run_pipeline.py` first.")
-        st.stop()
+        with st.spinner("🚀 First-time Setup: Building Star Schema Data Warehouse on Streamlit Cloud..."):
+            import sys
+            if str(PROJECT_ROOT) not in sys.path:
+                sys.path.insert(0, str(PROJECT_ROOT))
+            from run_pipeline import execute_full_pipeline
+            execute_full_pipeline(num_orders=10000)
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 conn = get_db_connection()

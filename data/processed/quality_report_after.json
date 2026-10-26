@@ -1,0 +1,530 @@
+{
+  "customers": {
+    "table_name": "customers",
+    "total_rows": 11250,
+    "total_columns": 9,
+    "total_missing_cells": 16059,
+    "completeness_score": 84.14,
+    "missing_by_column": {
+      "customer_id": 0,
+      "customer_unique_id": 0,
+      "customer_zip_code_prefix": 0,
+      "customer_city": 0,
+      "customer_state": 0,
+      "recency": 5353,
+      "frequency": 5353,
+      "monetary": 5353,
+      "rfm_segment": 0
+    },
+    "missing_pct_by_column": {
+      "customer_id": 0.0,
+      "customer_unique_id": 0.0,
+      "customer_zip_code_prefix": 0.0,
+      "customer_city": 0.0,
+      "customer_state": 0.0,
+      "recency": 47.58,
+      "frequency": 47.58,
+      "monetary": 47.58,
+      "rfm_segment": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "customer_zip_code_prefix": {
+        "q1": 29000.0,
+        "q3": 74000.0,
+        "iqr": 45000.0,
+        "lower_bound": -38500.0,
+        "upper_bound": 141500.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "recency": {
+        "q1": 266.0,
+        "q3": 527.0,
+        "iqr": 261.0,
+        "lower_bound": -125.5,
+        "upper_bound": 918.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "frequency": {
+        "q1": 1.0,
+        "q3": 2.0,
+        "iqr": 1.0,
+        "lower_bound": -0.5,
+        "upper_bound": 3.5,
+        "outlier_count": 89,
+        "outlier_pct": 1.51
+      },
+      "monetary": {
+        "q1": 256.24,
+        "q3": 666.52,
+        "iqr": 410.28,
+        "lower_bound": -359.18,
+        "upper_bound": 1281.94,
+        "outlier_count": 223,
+        "outlier_pct": 3.78
+      }
+    },
+    "total_outliers": 312,
+    "validity_issues": {},
+    "health_score": 93.1
+  },
+  "dim_date": {
+    "table_name": "dim_date",
+    "total_rows": 731,
+    "total_columns": 12,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "full_date": 0,
+      "date_key": 0,
+      "year": 0,
+      "quarter": 0,
+      "month": 0,
+      "month_name": 0,
+      "month_year": 0,
+      "day": 0,
+      "day_of_week": 0,
+      "day_name": 0,
+      "is_weekend": 0,
+      "fiscal_quarter": 0
+    },
+    "missing_pct_by_column": {
+      "full_date": 0.0,
+      "date_key": 0.0,
+      "year": 0.0,
+      "quarter": 0.0,
+      "month": 0.0,
+      "month_name": 0.0,
+      "month_year": 0.0,
+      "day": 0.0,
+      "day_of_week": 0.0,
+      "day_name": 0.0,
+      "is_weekend": 0.0,
+      "fiscal_quarter": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "date_key": {
+        "q1": 20230702.5,
+        "q3": 20240701.5,
+        "iqr": 9999.0,
+        "lower_bound": 20215704.0,
+        "upper_bound": 20255700.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "year": {
+        "q1": 2023.0,
+        "q3": 2024.0,
+        "iqr": 1.0,
+        "lower_bound": 2021.5,
+        "upper_bound": 2025.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "quarter": {
+        "q1": 2.0,
+        "q3": 4.0,
+        "iqr": 2.0,
+        "lower_bound": -1.0,
+        "upper_bound": 7.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "month": {
+        "q1": 4.0,
+        "q3": 10.0,
+        "iqr": 6.0,
+        "lower_bound": -5.0,
+        "upper_bound": 19.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "day": {
+        "q1": 8.0,
+        "q3": 23.0,
+        "iqr": 15.0,
+        "lower_bound": -14.5,
+        "upper_bound": 45.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "day_of_week": {
+        "q1": 2.0,
+        "q3": 6.0,
+        "iqr": 4.0,
+        "lower_bound": -4.0,
+        "upper_bound": 12.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "is_weekend": {
+        "q1": 0.0,
+        "q3": 1.0,
+        "iqr": 1.0,
+        "lower_bound": -1.5,
+        "upper_bound": 2.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  },
+  "orders": {
+    "table_name": "orders",
+    "total_rows": 15000,
+    "total_columns": 13,
+    "total_missing_cells": 21674,
+    "completeness_score": 88.89,
+    "missing_by_column": {
+      "order_id": 0,
+      "customer_id": 0,
+      "order_status": 0,
+      "order_purchase_timestamp": 0,
+      "order_approved_at": 0,
+      "order_delivered_carrier_date": 2069,
+      "order_delivered_customer_date": 6535,
+      "order_estimated_delivery_date": 0,
+      "actual_delivery_days": 6535,
+      "estimated_delivery_days": 0,
+      "delivery_delay_days": 6535,
+      "sla_breached": 0,
+      "delivery_performance_status": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "customer_id": 0.0,
+      "order_status": 0.0,
+      "order_purchase_timestamp": 0.0,
+      "order_approved_at": 0.0,
+      "order_delivered_carrier_date": 13.79,
+      "order_delivered_customer_date": 43.57,
+      "order_estimated_delivery_date": 0.0,
+      "actual_delivery_days": 43.57,
+      "estimated_delivery_days": 0.0,
+      "delivery_delay_days": 43.57,
+      "sla_breached": 0.0,
+      "delivery_performance_status": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "actual_delivery_days": {
+        "q1": 5.0,
+        "q3": 14.0,
+        "iqr": 9.0,
+        "lower_bound": -8.5,
+        "upper_bound": 27.5,
+        "outlier_count": 469,
+        "outlier_pct": 5.54
+      },
+      "estimated_delivery_days": {
+        "q1": 13.0,
+        "q3": 22.0,
+        "iqr": 9.0,
+        "lower_bound": -0.5,
+        "upper_bound": 35.5,
+        "outlier_count": 114,
+        "outlier_pct": 0.76
+      },
+      "delivery_delay_days": {
+        "q1": -13.0,
+        "q3": -3.0,
+        "iqr": 10.0,
+        "lower_bound": -28.0,
+        "upper_bound": 12.0,
+        "outlier_count": 274,
+        "outlier_pct": 3.24
+      },
+      "sla_breached": {
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0,
+        "lower_bound": 0.0,
+        "upper_bound": 0.0,
+        "outlier_count": 1409,
+        "outlier_pct": 9.39
+      }
+    },
+    "total_outliers": 2266,
+    "validity_issues": {},
+    "health_score": 92.53
+  },
+  "order_items": {
+    "table_name": "order_items",
+    "total_rows": 19509,
+    "total_columns": 8,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "order_id": 0,
+      "order_item_id": 0,
+      "product_id": 0,
+      "seller_id": 0,
+      "shipping_limit_date": 0,
+      "price": 0,
+      "freight_value": 0,
+      "total_item_value": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "order_item_id": 0.0,
+      "product_id": 0.0,
+      "seller_id": 0.0,
+      "shipping_limit_date": 0.0,
+      "price": 0.0,
+      "freight_value": 0.0,
+      "total_item_value": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "order_item_id": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 4509,
+        "outlier_pct": 23.11
+      },
+      "price": {
+        "q1": 123.4,
+        "q3": 342.66,
+        "iqr": 219.26,
+        "lower_bound": -205.49,
+        "upper_bound": 671.55,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "freight_value": {
+        "q1": 19.78,
+        "q3": 43.34,
+        "iqr": 23.56,
+        "lower_bound": -15.56,
+        "upper_bound": 78.68,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "total_item_value": {
+        "q1": 154.86,
+        "q3": 374.32,
+        "iqr": 219.46,
+        "lower_bound": -174.33,
+        "upper_bound": 703.51,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 4509,
+    "validity_issues": {},
+    "health_score": 95.38
+  },
+  "order_payments": {
+    "table_name": "order_payments",
+    "total_rows": 15000,
+    "total_columns": 5,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "order_id": 0,
+      "payment_sequential": 0,
+      "payment_type": 0,
+      "payment_installments": 0,
+      "payment_value": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "payment_sequential": 0.0,
+      "payment_type": 0.0,
+      "payment_installments": 0.0,
+      "payment_value": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "payment_sequential": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "payment_installments": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 3444,
+        "outlier_pct": 22.96
+      },
+      "payment_value": {
+        "q1": 187.02,
+        "q3": 445.16,
+        "iqr": 258.14,
+        "lower_bound": -200.18,
+        "upper_bound": 832.37,
+        "outlier_count": 484,
+        "outlier_pct": 3.23
+      }
+    },
+    "total_outliers": 3928,
+    "validity_issues": {},
+    "health_score": 94.76
+  },
+  "order_reviews": {
+    "table_name": "order_reviews",
+    "total_rows": 12727,
+    "total_columns": 5,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "review_id": 0,
+      "order_id": 0,
+      "review_score": 0,
+      "review_comment_title": 0,
+      "review_creation_date": 0
+    },
+    "missing_pct_by_column": {
+      "review_id": 0.0,
+      "order_id": 0.0,
+      "review_score": 0.0,
+      "review_comment_title": 0.0,
+      "review_creation_date": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "review_score": {
+        "q1": 2.0,
+        "q3": 5.0,
+        "iqr": 3.0,
+        "lower_bound": -2.5,
+        "upper_bound": 9.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  },
+  "products": {
+    "table_name": "products",
+    "total_rows": 800,
+    "total_columns": 6,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "product_id": 0,
+      "product_category_name": 0,
+      "product_weight_g": 0,
+      "product_length_cm": 0,
+      "product_height_cm": 0,
+      "product_width_cm": 0
+    },
+    "missing_pct_by_column": {
+      "product_id": 0.0,
+      "product_category_name": 0.0,
+      "product_weight_g": 0.0,
+      "product_length_cm": 0.0,
+      "product_height_cm": 0.0,
+      "product_width_cm": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "product_weight_g": {
+        "q1": 3891.72,
+        "q3": 11365.88,
+        "iqr": 7474.15,
+        "lower_bound": -7319.5,
+        "upper_bound": 22577.1,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "product_length_cm": {
+        "q1": 28.8,
+        "q3": 62.98,
+        "iqr": 34.17,
+        "lower_bound": -22.46,
+        "upper_bound": 114.24,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "product_height_cm": {
+        "q1": 17.1,
+        "q3": 39.7,
+        "iqr": 22.6,
+        "lower_bound": -16.8,
+        "upper_bound": 73.6,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "product_width_cm": {
+        "q1": 23.2,
+        "q3": 48.4,
+        "iqr": 25.2,
+        "lower_bound": -14.6,
+        "upper_bound": 86.2,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  },
+  "sellers": {
+    "table_name": "sellers",
+    "total_rows": 150,
+    "total_columns": 4,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "seller_id": 0,
+      "seller_zip_code_prefix": 0,
+      "seller_city": 0,
+      "seller_state": 0
+    },
+    "missing_pct_by_column": {
+      "seller_id": 0.0,
+      "seller_zip_code_prefix": 0.0,
+      "seller_city": 0.0,
+      "seller_state": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "seller_zip_code_prefix": {
+        "q1": 20000.0,
+        "q3": 74000.0,
+        "iqr": 54000.0,
+        "lower_bound": -61000.0,
+        "upper_bound": 155000.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  }
+}

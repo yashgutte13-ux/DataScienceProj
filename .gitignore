@@ -18,12 +18,15 @@ ENV/
 .vscode/
 .idea/
 
-# Large generated data files (Re-generated via python run_pipeline.py)
+# Large generated data files
 data/raw/*.csv
 data/processed/*.csv
-data/processed/*.json
-data/warehouse/*.db
 data/warehouse/powerbi_export/*.csv
+
+# Track database and quality reports for instant cloud deployment
+!data/warehouse/ecommerce_dw.db
+!data/processed/quality_report_before.json
+!data/processed/quality_report_after.json
 
 # Keep directory structures
 !data/raw/.gitkeep

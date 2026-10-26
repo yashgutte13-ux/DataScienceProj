@@ -1,0 +1,333 @@
+{
+  "customers": {
+    "table_name": "customers",
+    "total_rows": 11587,
+    "total_columns": 5,
+    "total_missing_cells": 365,
+    "completeness_score": 99.37,
+    "missing_by_column": {
+      "customer_id": 0,
+      "customer_unique_id": 0,
+      "customer_zip_code_prefix": 365,
+      "customer_city": 0,
+      "customer_state": 0
+    },
+    "missing_pct_by_column": {
+      "customer_id": 0.0,
+      "customer_unique_id": 0.0,
+      "customer_zip_code_prefix": 3.15,
+      "customer_city": 0.0,
+      "customer_state": 0.0
+    },
+    "exact_duplicates": 337,
+    "key_duplicates": 337,
+    "uniqueness_score": 97.09,
+    "outlier_summary": {
+      "customer_zip_code_prefix": {
+        "q1": 29000.0,
+        "q3": 74000.0,
+        "iqr": 45000.0,
+        "lower_bound": -38500.0,
+        "upper_bound": 141500.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 98.58
+  },
+  "orders": {
+    "table_name": "orders",
+    "total_rows": 15000,
+    "total_columns": 8,
+    "total_missing_cells": 8604,
+    "completeness_score": 92.83,
+    "missing_by_column": {
+      "order_id": 0,
+      "customer_id": 0,
+      "order_status": 0,
+      "order_purchase_timestamp": 0,
+      "order_approved_at": 0,
+      "order_delivered_carrier_date": 2069,
+      "order_delivered_customer_date": 6535,
+      "order_estimated_delivery_date": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "customer_id": 0.0,
+      "order_status": 0.0,
+      "order_purchase_timestamp": 0.0,
+      "order_approved_at": 0.0,
+      "order_delivered_carrier_date": 13.79,
+      "order_delivered_customer_date": 43.57,
+      "order_estimated_delivery_date": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {},
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 97.13
+  },
+  "order_items": {
+    "table_name": "order_items",
+    "total_rows": 19509,
+    "total_columns": 7,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "order_id": 0,
+      "order_item_id": 0,
+      "product_id": 0,
+      "seller_id": 0,
+      "shipping_limit_date": 0,
+      "price": 0,
+      "freight_value": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "order_item_id": 0.0,
+      "product_id": 0.0,
+      "seller_id": 0.0,
+      "shipping_limit_date": 0.0,
+      "price": 0.0,
+      "freight_value": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "order_item_id": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 4509,
+        "outlier_pct": 23.11
+      },
+      "price": {
+        "q1": 122.75,
+        "q3": 342.58,
+        "iqr": 219.83,
+        "lower_bound": -207.0,
+        "upper_bound": 672.33,
+        "outlier_count": 37,
+        "outlier_pct": 0.19
+      },
+      "freight_value": {
+        "q1": 19.78,
+        "q3": 43.34,
+        "iqr": 23.56,
+        "lower_bound": -15.56,
+        "upper_bound": 78.68,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 4546,
+    "validity_issues": {
+      "price_negative_values": 38
+    },
+    "health_score": 95.34
+  },
+  "order_payments": {
+    "table_name": "order_payments",
+    "total_rows": 15225,
+    "total_columns": 5,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "order_id": 0,
+      "payment_sequential": 0,
+      "payment_type": 0,
+      "payment_installments": 0,
+      "payment_value": 0
+    },
+    "missing_pct_by_column": {
+      "order_id": 0.0,
+      "payment_sequential": 0.0,
+      "payment_type": 0.0,
+      "payment_installments": 0.0,
+      "payment_value": 0.0
+    },
+    "exact_duplicates": 225,
+    "key_duplicates": 225,
+    "uniqueness_score": 98.52,
+    "outlier_summary": {
+      "payment_sequential": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "payment_installments": {
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "outlier_count": 3498,
+        "outlier_pct": 22.98
+      },
+      "payment_value": {
+        "q1": 186.83,
+        "q3": 445.16,
+        "iqr": 258.33,
+        "lower_bound": -200.67,
+        "upper_bound": 832.66,
+        "outlier_count": 494,
+        "outlier_pct": 3.24
+      }
+    },
+    "total_outliers": 3992,
+    "validity_issues": {},
+    "health_score": 94.16
+  },
+  "order_reviews": {
+    "table_name": "order_reviews",
+    "total_rows": 12727,
+    "total_columns": 5,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "review_id": 0,
+      "order_id": 0,
+      "review_score": 0,
+      "review_comment_title": 0,
+      "review_creation_date": 0
+    },
+    "missing_pct_by_column": {
+      "review_id": 0.0,
+      "order_id": 0.0,
+      "review_score": 0.0,
+      "review_comment_title": 0.0,
+      "review_creation_date": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "review_score": {
+        "q1": 2.0,
+        "q3": 5.0,
+        "iqr": 3.0,
+        "lower_bound": -2.5,
+        "upper_bound": 9.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  },
+  "products": {
+    "table_name": "products",
+    "total_rows": 800,
+    "total_columns": 6,
+    "total_missing_cells": 34,
+    "completeness_score": 99.29,
+    "missing_by_column": {
+      "product_id": 0,
+      "product_category_name": 34,
+      "product_weight_g": 0,
+      "product_length_cm": 0,
+      "product_height_cm": 0,
+      "product_width_cm": 0
+    },
+    "missing_pct_by_column": {
+      "product_id": 0.0,
+      "product_category_name": 4.25,
+      "product_weight_g": 0.0,
+      "product_length_cm": 0.0,
+      "product_height_cm": 0.0,
+      "product_width_cm": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "product_weight_g": {
+        "q1": 3891.72,
+        "q3": 11365.88,
+        "iqr": 7474.15,
+        "lower_bound": -7319.5,
+        "upper_bound": 22577.1,
+        "outlier_count": 8,
+        "outlier_pct": 1.0
+      },
+      "product_length_cm": {
+        "q1": 28.8,
+        "q3": 62.98,
+        "iqr": 34.17,
+        "lower_bound": -22.46,
+        "upper_bound": 114.24,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "product_height_cm": {
+        "q1": 17.1,
+        "q3": 39.7,
+        "iqr": 22.6,
+        "lower_bound": -16.8,
+        "upper_bound": 73.6,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "product_width_cm": {
+        "q1": 23.2,
+        "q3": 48.4,
+        "iqr": 25.2,
+        "lower_bound": -14.6,
+        "upper_bound": 86.2,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 8,
+    "validity_issues": {},
+    "health_score": 99.52
+  },
+  "sellers": {
+    "table_name": "sellers",
+    "total_rows": 150,
+    "total_columns": 4,
+    "total_missing_cells": 0,
+    "completeness_score": 100.0,
+    "missing_by_column": {
+      "seller_id": 0,
+      "seller_zip_code_prefix": 0,
+      "seller_city": 0,
+      "seller_state": 0
+    },
+    "missing_pct_by_column": {
+      "seller_id": 0.0,
+      "seller_zip_code_prefix": 0.0,
+      "seller_city": 0.0,
+      "seller_state": 0.0
+    },
+    "exact_duplicates": 0,
+    "key_duplicates": 0,
+    "uniqueness_score": 100.0,
+    "outlier_summary": {
+      "seller_zip_code_prefix": {
+        "q1": 20000.0,
+        "q3": 74000.0,
+        "iqr": 54000.0,
+        "lower_bound": -61000.0,
+        "upper_bound": 155000.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      }
+    },
+    "total_outliers": 0,
+    "validity_issues": {},
+    "health_score": 100.0
+  }
+}
