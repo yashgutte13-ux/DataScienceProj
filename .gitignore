@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# Large generated data files (Re-generated via python run_pipeline.py)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.json
+data/warehouse/*.db
+data/warehouse/powerbi_export/*.csv
+
+# Keep directory structures
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/warehouse/.gitkeep
+!data/warehouse/powerbi_export/.gitkeep
+
+# Large OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
